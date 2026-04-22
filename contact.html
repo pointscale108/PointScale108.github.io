@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - PointScale Web Design Agency</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>PointScale</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="services.html" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="pricing.html" class="nav-link">Pricing</a>
+                </li>
+                <li class="nav-item">
+                    <a href="portfolio.html" class="nav-link">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link nav-cta">Get Started</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Book Your Website</h1>
+            <p class="page-subtitle">Let's create something amazing together</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Ready to get started?</h3>
+                    <p>Fill out the form below and we'll get back to you within 24 hours to discuss your project. We'll work with you to create the perfect website for your business.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>pointscale108@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">⏰</div>
+                            <div>
+                                <h4>Response Time</h4>
+                                <p>Within 24 hours</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">🎯</div>
+                            <div>
+                                <h4>Free Consultation</h4>
+                                <p>No obligation to purchase</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Formspree Success and Error Messages -->
+                <div class="form-messages">
+                    <div class="success-message" id="success-message" style="display: none;">
+                        <h3>🎉 Booking Request Sent Successfully!</h3>
+                        <p>Thank you for your inquiry! We'll contact you within 24 hours to discuss your project.</p>
+                    </div>
+                    <div class="error-message" id="error-message" style="display: none;">
+                        <h3>⚠️ Submission Error</h3>
+                        <p>There was an error sending your request. Please try again or contact us directly at pointscale108@gmail.com</p>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm" action="https://formspree.io/f/mnjlgbaz" method="POST">
+                    <div class="form-section">
+                        <h3>Contact Information</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Name *</label>
+                                <input type="text" id="name" name="name" required>
+                                <span class="field-error" id="name-error"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                                <span class="field-error" id="email-error"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="business">Business Name</label>
+                            <input type="text" id="business" name="business" placeholder="Optional">
+                            <span class="field-error" id="business-error"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Project Details</h3>
+                        <div class="form-group">
+                            <label for="project-type">Project Type *</label>
+                            <select id="project-type" name="project-type" required>
+                                <option value="">Select a project type</option>
+                                <option value="New Website">New Website</option>
+                                <option value="Website Redesign">Website Redesign</option>
+                                <option value="Landing Page">Landing Page</option>
+                                <option value="Portfolio Website">Portfolio Website</option>
+                                <option value="E-commerce">E-commerce</option>
+                                <option value="Other">Other</option>
+                            </select>
+                            <span class="field-error" id="project-type-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Project Details *</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Tell us about your project, goals, and any specific requirements..." required></textarea>
+                            <span class="field-error" id="message-error"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Select Your Plan</h3>
+                        <div class="form-group">
+                            <label for="plan">Base Plan *</label>
+                            <select id="plan" name="plan" required>
+                                <option value="">Select a plan</option>
+                                <option value="Base Plan - $500">Base Plan - $500</option>
+                            </select>
+                            <span class="field-error" id="plan-error"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Add-on Features (+$50 each)</label>
+                            <div class="addons-grid">
+                                <div class="addon-checkbox">
+                                    <input type="checkbox" id="extra-pages" name="addons" value="Extra Pages - $50">
+                                    <label for="extra-pages">
+                                        <span class="checkmark"></span>
+                                        <div class="addon-info">
+                                            <h4>Extra Pages</h4>
+                                            <p>Additional pages beyond base plan</p>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="addon-checkbox">
+                                    <input type="checkbox" id="contact-forms" name="addons" value="Advanced Contact Forms - $50">
+                                    <label for="contact-forms">
+                                        <span class="checkmark"></span>
+                                        <div class="addon-info">
+                                            <h4>Advanced Contact Forms</h4>
+                                            <p>Multi-field forms with validation</p>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="addon-checkbox">
+                                    <input type="checkbox" id="seo-setup" name="addons" value="SEO Setup - $50">
+                                    <label for="seo-setup">
+                                        <span class="checkmark"></span>
+                                        <div class="addon-info">
+                                            <h4>SEO Setup</h4>
+                                            <p>Advanced SEO optimization</p>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="addon-checkbox">
+                                    <input type="checkbox" id="animations" name="addons" value="Animations - $50">
+                                    <label for="animations">
+                                        <span class="checkmark"></span>
+                                        <div class="addon-info">
+                                            <h4>Animations</h4>
+                                            <p>Smooth animations and interactions</p>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="addon-checkbox">
+                                    <input type="checkbox" id="custom-sections" name="addons" value="Custom Sections - $50">
+                                    <label for="custom-sections">
+                                        <span class="checkmark"></span>
+                                        <div class="addon-info">
+                                            <h4>Custom Sections</h4>
+                                            <p>Bespoke sections for your needs</p>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="addon-checkbox">
+                                    <input type="checkbox" id="mobile-optimization" name="addons" value="Mobile Optimization - $50">
+                                    <label for="mobile-optimization">
+                                        <span class="checkmark"></span>
+                                        <div class="addon-info">
+                                            <h4>Mobile Optimization</h4>
+                                            <p>Advanced mobile features</p>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="price-summary">
+                            <div class="price-row">
+                                <span>Base Plan:</span>
+                                <span id="base-price">$0</span>
+                            </div>
+                            <div class="price-row">
+                                <span>Add-ons:</span>
+                                <span id="addons-price">$0</span>
+                            </div>
+                            <div class="price-row total">
+                                <span>Total:</span>
+                                <span id="total-price">$0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-button" id="submit-btn">Send Booking Request</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>How long does the process take?</h3>
+                    <p>Most projects are completed within 2-3 weeks from start to finish.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do you offer payment plans?</h3>
+                    <p>Yes, we offer flexible payment plans with 50% upfront and 50% upon completion.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What happens after I submit this form?</h3>
+                    <p>We'll review your requirements and contact you within 24 hours to discuss your project in detail.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can I change my plan later?</h3>
+                    <p>Yes, we can adjust your plan and add-ons during the consultation phase.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>PointScale</h3>
+                    <p>Clean, Modern Web Design</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="services.html">Custom Design</a></li>
+                            <li><a href="services.html">Landing Pages</a></li>
+                            <li><a href="services.html">Portfolio Sites</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="portfolio.html">Portfolio</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Contact</h4>
+                        <p>Email: pointscale108@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 PointScale. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
